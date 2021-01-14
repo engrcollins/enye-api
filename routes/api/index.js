@@ -3,7 +3,7 @@ const express = require('express');
 const { isEmpty } = require('lodash');
 const router = express.Router();
 
-router.post('/add', async (req, res) => {
+/*router.post('/add', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
             message: 'Body should not be empty',
@@ -36,6 +36,7 @@ router.post('/add', async (req, res) => {
         });
     }
 });
+*/
 
 router.get('/rates', async (req, res) => {
     let homeBase = req.query.base.toUpperCase();
@@ -67,6 +68,7 @@ router.get('/rates', async (req, res) => {
     init();
 });
 
+/*
 router.post('/delete', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
@@ -90,5 +92,5 @@ router.post('/delete', async (req, res) => {
         });
     }
 });
-
+*/
 module.exports = router;
