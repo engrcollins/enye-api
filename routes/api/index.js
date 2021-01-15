@@ -35,7 +35,7 @@ router.get('/rates', async (req, res) => {
             }
         } catch(e) {
             console.log(e)
-            return res.send("Internal server error, check that you are connected to the internet");
+            return res.send("Internal server error, check that you are connected to the internet and try again");
         }
 
     };
