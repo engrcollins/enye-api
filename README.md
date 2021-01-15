@@ -7,7 +7,7 @@ I was tasked with creating a service integration to a public API and exposing a 
 
 My application integrate with the [Exchange Rate API](https://api.exchangeratesapi.io/latest) to proxy requests 
 
-- My REST endpoint `/api/rates` **must** return a JSON object of the latest currency rates in the following format/schema:
+- My REST endpoint `/api/rates` returns a JSON object of the latest currency rates in the following format/schema:
 
 ```jsx
 {
@@ -44,7 +44,7 @@ My application integrate with the [Exchange Rate API](https://api.exchangeratesa
 A sample `GET` request to fetch the currency exchange rates from `USD` to `CNY,JPY,CAD` looks like:
 
 ```jsx
-    ***enye-collins-api.herokuapp.com/api/rates?base=usd&currency=cny,jpy,cad***
+    enye-collins-api.herokuapp.com/api/rates?base=usd&currency=cny,jpy,cad
 ```
 
 A successful response for the above request should return the following schema (of course with a more up-to-date values)

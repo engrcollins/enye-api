@@ -1,12 +1,11 @@
 {
-  "name": "mernapp",
+  "name": "enye-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
