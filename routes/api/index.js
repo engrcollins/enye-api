@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/rates', async (req, res) => {
+    if((typeof req.query.base == "undefined") || (typeof req.query.currency == "undefined")){
+        return res.json({ message: "Welcome to McCollins Technologies. You can make a typical request like this: 'enye-collins-api.herokuapp.com/api/rates?base=usd&currency=cny,jpy,cad' " });
+    }
     let homeBase = req.query.base.toUpperCase();
     let currencies = req.query.currency.toUpperCase();
     currencies = currencies.split(',')
