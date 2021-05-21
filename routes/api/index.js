@@ -14,7 +14,7 @@ router.get('/rates', async (req, res) => {
     let today
     const init = async() => {
         try{
-            const load = await axios.get(`https://api.exchangeratesapi.io/latest?base=${homeBase}`)
+            const load = await axios.get(`https://api.exchangeratesapi.io/latest?base=${homeBase}`) //http://api.currencylayer.com/live?access_key=b07c399d959e819f28ec07b9724cd659
             console.log(load.status)
             if (load.status == 200){
                 let retLoad = load.data
